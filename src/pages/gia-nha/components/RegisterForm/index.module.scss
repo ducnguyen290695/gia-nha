@@ -1,0 +1,37 @@
+.form_container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  .form {
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .title {
+      font-family: AvenirNextDemiBold;
+      font-weight: 600;
+      font-size: 26px;
+      color: #212429;
+      text-align: center;
+    }
+
+    .avatar_description {
+      font-family: Roboto;
+      font-size: 14px;
+      line-height: 16px;
+      color: #6b7280;
+      margin-top: 10px;
+    }
+
+    input {
+      width: 300px;
+    }
+
+    button {
+      width: 300px;
+    }
+  }
+}

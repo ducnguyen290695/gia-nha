@@ -1,0 +1,126 @@
+@import "/src/styles/mixins";
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  .info_col {
+    display: flex;
+    .avatar {
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      margin-right: 10px;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+
+    .info_detail {
+      .name_box {
+        display: flex;
+        align-items: center;
+        .name {
+          font-family: Roboto;
+          font-weight: bold;
+          font-size: 16px;
+          color: #212429;
+          margin: 0;
+        }
+
+        .diamon_img {
+          height: 30px;
+          width: 30px;
+          margin-left: 15px;
+          margin-right: 5px;
+          background-image: url("../../../../../../../../assets/images/diamon.png");
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+        }
+
+        .diamons {
+          font-size: 14px;
+          color: #6b7280;
+          margin: 0;
+        }
+      }
+
+      .phone {
+        display: flex;
+        align-items: center;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        color: #006aff;
+        svg {
+          margin-right: 10px;
+        }
+
+        .phone_number {
+          margin-right: 10px;
+          margin-bottom: 0;
+        }
+
+        .show_more_btn {
+          margin-bottom: 0;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .price_col {
+    .info_price {
+      font-weight: 500;
+      font-size: 20px;
+      color: #212429;
+      margin-bottom: 0;
+    }
+
+    .sale_time {
+      font-size: 14px;
+      color: #9ca3af;
+      margin-bottom: 0;
+    }
+  }
+}
+
+// ===============================================Reponesive===============================================
+@include tablet_landscape() {
+  .item {
+    .info_col {
+      .thumbnail {
+        height: 40px;
+        width: 40px;
+      }
+
+      .info_detail {
+        .name_box {
+          .name {
+            font-size: 14px;
+          }
+
+          .diamon_img {
+            height: 20px;
+            width: 20px;
+          }
+        }
+      }
+    }
+
+    .price_col {
+      .info_price {
+        font-size: 18px;
+      }
+
+      .sale_time {
+        font-size: 12px;
+      }
+    }
+  }
+}

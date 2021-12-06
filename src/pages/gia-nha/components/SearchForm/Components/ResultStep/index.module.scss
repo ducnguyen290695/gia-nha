@@ -1,0 +1,211 @@
+@import "/src/styles/mixins";
+
+.result_step {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #cacaca;
+    border-radius: 10px;
+  }
+  .left_col {
+    width: 60%;
+    height: 100%;
+    padding: 50px 20px;
+    border-right: 1px solid #dbdbdb;
+    .chart_title {
+      font-family: Roboto;
+      font-size: 16px;
+    }
+
+    .chart {
+      height: fit-content;
+      width: 100%;
+    }
+  }
+
+  .right_col {
+    flex: 1;
+    font-family: Roboto;
+    padding: 50px 20px;
+
+    .title {
+      font-weight: bold;
+      font-size: 24px;
+      color: #4b5563;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      font-size: 16px;
+      color: #4b5563;
+    }
+
+    .price_label {
+      font-size: 16px;
+      text-align: center;
+      color: #9ca3af;
+      margin-bottom: 0px;
+    }
+
+    .price {
+      font-size: 38px;
+      text-align: center;
+      color: #212429;
+      margin-bottom: 0px;
+    }
+
+    .rate {
+      font-weight: bold;
+      font-size: 24px;
+      text-align: center;
+      color: #006aff;
+    }
+
+    .info {
+      display: flex;
+      justify-content: space-between;
+      .info_item {
+        font-size: 16px;
+        color: #6b7280;
+        span {
+          color: black;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .local_holding {
+      .label {
+        font-size: 16px;
+        color: #212429;
+      }
+
+      .local_holding_list {
+        margin-bottom: 20px;
+      }
+
+      .see_more {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        font-size: 14px;
+        color: #6b7280;
+        margin-bottom: 20px;
+        &:hover {
+          color: #0062ff;
+        }
+        svg {
+          margin-right: 5px;
+        }
+        p {
+          margin-bottom: 0;
+        }
+      }
+
+      .submit_btn {
+        width: 100%;
+        margin-top: 20px;
+        background-color: #0062ff;
+        height: 50px;
+        font-size: 20px;
+      }
+
+      .opinion {
+        background-color: #eff6ff;
+        margin: 30px -20px 0 -20px;
+        padding: 20px;
+        .your_opinion {
+          font-weight: bold;
+          font-size: 16px;
+          color: #006aff;
+          text-align: center;
+          border: 1px solid #dbdbdb;
+          border-radius: 5px;
+          padding: 10px 0;
+          background-color: white;
+          cursor: pointer;
+          &:hover {
+            background-color: rgb(240, 240, 240);
+          }
+        }
+
+        .share {
+          font-size: 14px;
+          color: #6b7280;
+        }
+      }
+    }
+  }
+}
+
+// ===========================================Reponesive==========================================
+@include tablet_landscape() {
+  .result_step {
+    .right_col {
+      .title {
+        font-size: 20px;
+      }
+
+      .description {
+        font-size: 15px;
+      }
+
+      .price_label {
+        font-size: 16px;
+      }
+
+      .price {
+        font-size: 32px;
+      }
+
+      .rate {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+@include tablet_portrait() {
+  .result_step {
+    flex-direction: column;
+    .left_col {
+      width: 100%;
+    }
+
+    .right_col {
+      width: 100%;
+      .title {
+        font-size: 20px;
+      }
+
+      .description {
+        font-size: 15px;
+      }
+
+      .price_label {
+        font-size: 16px;
+      }
+
+      .price {
+        font-size: 32px;
+      }
+
+      .rate {
+        font-size: 22px;
+      }
+    }
+  }
+}

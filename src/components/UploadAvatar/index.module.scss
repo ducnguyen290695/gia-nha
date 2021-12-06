@@ -1,0 +1,22 @@
+.upload {
+  border: 1px solid #dbdbdb;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  .avatar_img {
+    height: 120px;
+    width: 120px;
+    // border: 1px solid #df0b0bcb;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .upload_btn {
+    font-size: 30px;
+    color: rgb(92, 92, 92);
+  }
+}

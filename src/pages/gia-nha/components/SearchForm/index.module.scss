@@ -1,0 +1,53 @@
+@import "/src/styles/mixins";
+
+.search_form {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow-x: hidden;
+  align-items: center;
+  .progress {
+    width: calc(100% + 10px);
+    position: absolute;
+    top: -7px;
+    left: -10px;
+  }
+  .form {
+    height: fit-content;
+    width: 500px;
+    .title {
+      font-family: AvenirNextDemiBold;
+      font-weight: 600;
+      font-size: 38px;
+      text-align: center;
+      color: #212429;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+// =============================================Reponesive=========================================
+@include tablet_portrait() {
+  .search_form {
+    .form {
+      .title {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+@include laptop() {
+}
+
+@include mobile_landscape() {
+}
+
+@include mobile_portrait() {
+  .search_form {
+    .form {
+      width: 80vw;
+    }
+  }
+}
